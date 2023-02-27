@@ -1,19 +1,19 @@
 import { DeskproAppProvider } from "@deskpro/app-sdk";
 import { Main } from "./pages/Main";
-import "./App.css";
 
-import "flatpickr/dist/themes/light.css";
-import "tippy.js/dist/tippy.css";
-import "simplebar/dist/simplebar.min.css";
-
-import "@deskpro/deskpro-ui/dist/deskpro-ui.css";
-import "@deskpro/deskpro-ui/dist/deskpro-custom-icons.css";
+import { DeskproDataContextProvider } from "./context/deskproDataContext";
+import { ErrorBoundary } from "react-error-boundary";
+import { ErrorFallback } from "./components/ErrorFallback/ErrorFallback";
 
 function App() {
   return (
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
       <DeskproAppProvider>
-        <Main />
+        <DeskproDataContextProvider>
+          <Main />
+        </DeskproDataContextProvider>
       </DeskproAppProvider>
+    </ErrorBoundary>
   );
 }
 

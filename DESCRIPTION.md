@@ -1,4 +1,7 @@
-My App
-======
+# IFrame
 
-todo: add a description that will appear alongside your app in Deskpro admin
+Embed an IFrame in the global component so you can display any website or web app.
+
+With our App, you can easily embed external content into the deskpro website, streamlining your user's browsing experience.
+
+Whether you're looking to display a map, a video, or any other web page, our IFrame App has got you covered.

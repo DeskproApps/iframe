@@ -1,28 +1,41 @@
 {
-  "name": "@deskpro-apps/my_app",
-  "title": "My App",
-  "description": "My Deskpro app",
+  "name": "@deskpro-apps/iframe",
+  "title": "IFrame",
+  "description": "Embed an IFrame in the global component so you can display any website or web app.",
   "version": "1.0.0",
   "scope": "agent",
+  "hasDevMode": true,
   "isSingleInstall": false,
-  "targets": [{
-    "target": "ticket_sidebar",
-    "entrypoint": "index.html"
-  }],
-  "settings": {
-    "example": {
-      "title": "Example Setting",
-      "description": "Example backend only setting",
-      "type": "string",
-      "isRequired": false,
-      "isBackendOnly": true
+  "targets": [
+    {
+      "target": "global",
+      "entrypoint": "index.html"
     }
-  },
-  "proxy": {
-    "whitelist": [{
-      "url": "https://example.com/.*",
-      "methods": ["GET", "POST", "PUT"],
-      "timeout": 10
-    }]
+  ],
+  "settings": {
+    "iframe_url": {
+      "title": "IFrame URL",
+      "description": "The URL to load in the iframe",
+      "type": "string",
+      "validationPattern": "^https:\\/\\/[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,}(\\/\\S*)?$",
+      "isRequired": true,
+      "isBackendOnly": false
+    },
+    "iframe_height_pixels": {
+      "title": "Column Height",
+      "description": "The height of the column in which the iframe will be displayed",
+      "validationPattern": "^\\d+$",
+      "type": "string",
+      "isRequired": true,
+      "isBackendOnly": false
+    },
+    "iframe_width_pixels": {
+      "title": "Column Width",
+      "description": "The width of the column in which the iframe will be displayed",
+      "validationPattern": "^\\d+$",
+      "type": "string",
+      "isRequired": true,
+      "isBackendOnly": false
+    }
   }
 }
