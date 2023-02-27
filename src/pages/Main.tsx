@@ -31,6 +31,7 @@ export const Main = () => {
 
   return (
     <iframe
+      data-testid="iframe"
       ref={iframeRef}
       src={url}
       frameBorder={0}
