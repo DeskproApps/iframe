@@ -1,4 +1,8 @@
-import { useInitialisedDeskproAppClient } from "@deskpro/app-sdk";
+import {
+  useDeskproAppClient,
+  useInitialisedDeskproAppClient,
+} from "@deskpro/app-sdk";
+import { useEffect } from "react";
 import { useDeskproData } from "../context/deskproDataContext";
 import { useParsedUrlDeskproValues } from "../hooks/useParsedUrlDeskproValues";
 
@@ -6,12 +10,17 @@ export const Main = () => {
   const deskproData = useDeskproData();
   const url = useParsedUrlDeskproValues();
 
-  useInitialisedDeskproAppClient((client) => {
-    client.setWidth(Number(deskproData?.settings?.iframe_width_pixels) || 512);
-    client.setHeight(
-      Number(deskproData?.settings?.iframe_height_pixels) || 512
-    );
-  });
+  useInitialisedDeskproAppClient(
+    (client) => {
+      client.setWidth(
+        Number(deskproData?.settings?.iframe_width_pixels) || 512
+      );
+      client.setHeight(
+        Number(deskproData?.settings?.iframe_height_pixels) || 512
+      );
+    },
+    [deskproData]
+  );
 
   if (!deskproData || !url) return null;
 
