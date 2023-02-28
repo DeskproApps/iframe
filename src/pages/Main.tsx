@@ -1,8 +1,4 @@
-import {
-  useDeskproAppClient,
-  useInitialisedDeskproAppClient,
-} from "@deskpro/app-sdk";
-import { useEffect } from "react";
+import { useInitialisedDeskproAppClient } from "@deskpro/app-sdk";
 import { useDeskproData } from "../context/deskproDataContext";
 import { useParsedUrlDeskproValues } from "../hooks/useParsedUrlDeskproValues";
 
