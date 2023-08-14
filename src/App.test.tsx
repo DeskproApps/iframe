@@ -1,11 +1,21 @@
 import { render, waitFor } from "@testing-library/react";
-import App from "./App";
+import { Main } from "./pages/Main";
+
+jest.mock("./hooks/useParsedUrlDeskproValues", () => ({
+  useParsedUrlDeskproValues: () => "https://www.google.com",
+}));
+
+jest.mock("./context/deskproDataContext", () => ({
+  useDeskproData: () => ({
+    settings: {},
+  }),
+}));
 
 test("renders App component", async () => {
-    const { getByText } = render(<App />);
+  const { getByTestId } = render(<Main />);
 
-    await waitFor(() => {
-        const buttonElement = getByText(/Greet/i);
-        expect(buttonElement).toBeInTheDocument();
-    });
+  await waitFor(() => {
+    const buttonElement = getByTestId("iframe");
+    expect(buttonElement).toBeInTheDocument();
+  });
 });
