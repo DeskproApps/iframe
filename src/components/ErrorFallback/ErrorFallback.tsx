@@ -1,4 +1,4 @@
-import { Stack, H1, H2 } from "@deskpro/app-sdk";
+import { Stack, H1, H2 } from "@deskpro/deskpro-ui";
 export const ErrorFallback = ({
   error,
 }: {
