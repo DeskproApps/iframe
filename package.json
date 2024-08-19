@@ -55,6 +55,5 @@
     "ts-jest": "^27.1.5",
     "typescript": "^4.9.5",
     "vite": "^2.9.18"
-  },
-  "packageManager": "pnpm@8.15.3+sha256.fc4a49bd609550a41e14d20efbce802a4b892aa4cac877322de2f0924f122991"
+  }
 }
