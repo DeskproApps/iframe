@@ -1,8 +1,7 @@
 import { useParsedUrlDeskproValues } from "../hooks/useParsedUrlDeskproValues";
 
 export const Main = () => {
-  const url = useParsedUrlDeskproValues() ?? 'https://www.example.com';
-
+  const url = useParsedUrlDeskproValues();
   if (!url) {
     return null;
   }
