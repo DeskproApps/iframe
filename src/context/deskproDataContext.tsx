@@ -5,7 +5,7 @@ import { IDeskproSettings } from "../types/deskproSettings";
 
 const DeskproDataContext = createContext<Context | null>(null);
 
-export const useDeskproData = () => useContext(DeskproDataContext);
+export const useDeskproData = () => useContext(DeskproDataContext) as {settings: {iframe_url?: string}, data: Context};
 
 export const DeskproDataContextProvider = ({
   children,
@@ -19,7 +19,7 @@ export const DeskproDataContextProvider = ({
   > | null>(null);
   useDeskproAppEvents({
     onShow: (c: Context) => {
-      if (c) setDeskproData({ ...c, settings: c.settings });
+      if (c) setDeskproData({ ...c, settings: c.settings as object });
     },
   });
 

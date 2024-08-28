@@ -2,7 +2,7 @@ import { Context } from "@deskpro/app-sdk";
 
 export const findDeskproValues = (string: string, context: Context) => {
   try {
-    let objValue = { ...context };
+    let objValue: object = { ...context };
 
     for (const s of string.split(".")) {
       objValue = objValue[s as keyof typeof objValue];
