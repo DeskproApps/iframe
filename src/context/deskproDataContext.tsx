@@ -5,7 +5,7 @@ import { IDeskproSettings } from "../types/deskproSettings";
 
 const DeskproDataContext = createContext<Context | null>(null);
 
-export const useDeskproData = () => useContext(DeskproDataContext) as {settings: {iframe_url?: string}, data: Context};
+export const useDeskproData = () => useContext(DeskproDataContext) as {settings: IDeskproSettings, data: Context};
 
 export const DeskproDataContextProvider = ({
   children,
@@ -19,7 +19,8 @@ export const DeskproDataContextProvider = ({
   > | null>(null);
   useDeskproAppEvents({
     onShow: (c: Context) => {
-      if (c) setDeskproData({ ...c, settings: c.settings as object });
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      if (c) setDeskproData({ ...c, settings: c.settings });
     },
   });
 
