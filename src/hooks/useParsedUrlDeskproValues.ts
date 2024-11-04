@@ -6,7 +6,7 @@ const REGEX = /\{\{([^}]+)}}/g;
 export const useParsedUrlDeskproValues = () => {
   const deskproData = useDeskproData();
 
-  let url = deskproData.settings?.iframe_url;
+  let url = deskproData?.settings?.iframe_url;
 
   if (!deskproData || !url) return;
 
