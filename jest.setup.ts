@@ -1,4 +1,3 @@
-import "regenerator-runtime/runtime";
 import * as React from "react";
 import "@testing-library/jest-dom/extend-expect";
 import { TextDecoder, TextEncoder } from "util";
