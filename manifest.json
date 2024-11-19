@@ -7,7 +7,7 @@
   "hasDevMode": true,
   "isSingleInstall": false,
   "serveUrl": "https://apps-cdn.deskpro-service.com/__name__/__version__",
-  "targets": [{ "target": "global", "entrypoint": "index.html" }],
+  "targets": [{ "target": "global", "entrypoint": "index.html" }, { "target": "ticket_sidebar", "entrypoint": "index.html" }],
   "settings": {
     "iframe_url": {
       "title": "IFrame URL",

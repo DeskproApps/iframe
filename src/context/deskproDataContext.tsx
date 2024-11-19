@@ -5,7 +5,7 @@ import { IDeskproSettings } from "../types/deskproSettings";
 
 const DeskproDataContext = createContext<Context | null>(null);
 
-export const useDeskproData = () => useContext(DeskproDataContext) as {settings: IDeskproSettings, data: Context};
+export const useDeskproData = () => useContext(DeskproDataContext) as {settings: IDeskproSettings, data: Context}|undefined;
 
 export const DeskproDataContextProvider = ({
   children,

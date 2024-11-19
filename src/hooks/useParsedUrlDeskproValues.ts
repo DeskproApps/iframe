@@ -6,7 +6,7 @@ const REGEX = /\{\{([^}]+)}}/g;
 export const useParsedUrlDeskproValues = () => {
   const deskproData = useDeskproData();
 
-  let url = deskproData.settings?.iframe_url;
+  let url = deskproData?.settings?.iframe_url;
 
   if (!deskproData || !url) return;
 
@@ -18,13 +18,19 @@ export const useParsedUrlDeskproValues = () => {
   }[] = [];
 
   while ((match = REGEX.exec(url)) !== null) {
+    let newText = '';
+    try {
+      newText = findDeskproValues(match[1], deskproData.data)
+    } catch (e) {
+      console.warn(`No value found for ${match[1]}`);
+    }
     arr.push({
       originalText: match[0],
-      newText: findDeskproValues(match[1], deskproData.data),
+      newText,
     });
   }
 
-  while (arr.length) {
+  while (arr.length > 0) {
     const item = arr.pop() as typeof arr[0];
     url = url.replace(item.originalText, item.newText);
   }
