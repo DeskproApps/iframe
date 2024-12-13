@@ -22,8 +22,8 @@ export const Main = () => {
       data-testid="iframe"
       src={url}
       style={{
-        width: "100%",
-        height: "100%",
+        width: "512px",
+        height: "512px",
         border: "none",
       }}
       allowFullScreen
