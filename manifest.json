@@ -25,6 +25,7 @@
       "description": "The height of the column in which the iframe will be displayed",
       "validationPattern": "^\\d+$",
       "type": "string",
+      "default": "420px",
       "isRequired": true,
       "isBackendOnly": false
     },
@@ -33,6 +34,7 @@
       "description": "The width of the column in which the iframe will be displayed",
       "validationPattern": "^\\d+$",
       "type": "string",
+      "default": "420px",
       "isRequired": true,
       "isBackendOnly": false
     }
