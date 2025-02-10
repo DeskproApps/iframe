@@ -2,7 +2,7 @@
   "name": "@deskpro-apps/iframe",
   "title": "IFrame",
   "description": "Embed an IFrame in the global component so you can display any website or web app.",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "scope": "agent",
   "hasDevMode": true,
   "isSingleInstall": false,
