@@ -30,8 +30,8 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       react-error-boundary:
-        specifier: ^3.1.4
-        version: 3.1.4(react@18.3.1)
+        specifier: ^5.0.0
+        version: 5.0.0(react@18.3.1)
       react-resize-observer:
         specifier: ^1.1.1
         version: 1.1.1(react@18.3.1)
@@ -2596,9 +2596,8 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  react-error-boundary@3.1.4:
-    resolution: {integrity: sha512-uM9uPzZJTF6wRQORmSrvOIgt4lJ9MC1sNgEOj2XGsDTRE4kmpWxg7ENK9EWNKJRMAOY9z0MuF4yIfl6gp4sotA==}
-    engines: {node: '>=10', npm: '>=6'}
+  react-error-boundary@5.0.0:
+    resolution: {integrity: sha512-tnjAxG+IkpLephNcePNA7v6F/QpWLH8He65+DmedchDwg162JZqx4NmbXj0mlAYVVEd81OW7aFhmbsScYfiAFQ==}
     peerDependencies:
       react: '>=16.13.1'
 
@@ -6055,7 +6054,7 @@ snapshots:
       react: 18.3.1
       scheduler: 0.23.2
 
-  react-error-boundary@3.1.4(react@18.3.1):
+  react-error-boundary@5.0.0(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.26.7
       react: 18.3.1
