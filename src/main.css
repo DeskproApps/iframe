@@ -1,6 +1,8 @@
-html, body, #root, #root div {
+html, body, #root, #root div, iframe {
   height: 100%;
   width: 100%;
   padding: 0px;
   margin: 0px;
+  border: 0px;
+  overflow: hidden;
 }

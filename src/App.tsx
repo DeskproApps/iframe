@@ -5,7 +5,7 @@ import { DeskproDataContextProvider } from "./context/deskproDataContext";
 import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "./components/ErrorFallback/ErrorFallback";
 
-function App() {
+export default function App() {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <DeskproAppProvider>
@@ -16,5 +16,3 @@ function App() {
     </ErrorBoundary>
   );
 }
-
-export default App;
