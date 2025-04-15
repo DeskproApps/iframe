@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@deskpro/app-sdk": "6.0.3",
-    "@deskpro/deskpro-ui": "^8.2.1",
+    "@deskpro/deskpro-ui": "^8.3.1",
     "@heroicons/react": "1.0.6",
-    "@swc/core": "^1.10.14",
+    "@swc/core": "^1.11.21",
     "polished": "^4.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -31,8 +31,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.14",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.6",
     "@types/testing-library__jest-dom": "^5.14.9",
     "@typescript-eslint/eslint-plugin": "6.20.0",
     "@typescript-eslint/parser": "6.20.0",
@@ -50,7 +50,7 @@
     "slugify": "^1.6.6",
     "styled-components": "^6.1.15",
     "ts-jest": "^27.1.5",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.0"
+    "typescript": "^5.8.3",
+    "vite": "^6.2.6"
   }
 }
