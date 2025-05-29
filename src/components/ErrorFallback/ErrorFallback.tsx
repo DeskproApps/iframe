@@ -1,14 +1,13 @@
 import { Stack, H1, H2 } from "@deskpro/deskpro-ui";
-export const ErrorFallback = ({
+import { FallbackRender } from "@sentry/react";
+
+export const ErrorFallback: FallbackRender = ({
   error,
-}: {
-  error: Error;
-  resetErrorBoundary: () => void;
 }) => {
   return (
     <Stack vertical style={{ margin: "8px" }} gap={10} role="alert">
       <H1>Something went wrong:</H1>
-      <H2>{error.message}</H2>
+      <H2>{(error as Error).message}</H2>
     </Stack>
   );
 };
