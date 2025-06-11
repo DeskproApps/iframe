@@ -1,18 +1,11 @@
-import { DeskproAppProvider } from "@deskpro/app-sdk";
-import { Main } from "./pages/Main";
-
-import { DeskproDataContextProvider } from "./context/deskproDataContext";
-import { ErrorFallback } from "./components/ErrorFallback/ErrorFallback";
-import { ErrorBoundary } from "@sentry/react";
+import { DeskproProvider } from "@deskpro/app-sdk-react-test";
+import Main from "./pages/Main.tsx";
+import type { Settings } from "./types/deskpro.ts";
 
 export default function App() {
   return (
-    <ErrorBoundary fallback={ErrorFallback}>
-      <DeskproAppProvider>
-        <DeskproDataContextProvider>
-          <Main />
-        </DeskproDataContextProvider>
-      </DeskproAppProvider>
-    </ErrorBoundary>
+    <DeskproProvider<Settings> context={null}>
+      <Main />
+    </DeskproProvider>
   );
 }
