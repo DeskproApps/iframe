@@ -15,7 +15,6 @@ export default defineConfig({
         { src: "./DESCRIPTION.md", dest: "./dist/" },
         { src: "./SETUP.md", dest: "./dist/" },
         { src: "./icon.svg", dest: "./dist/" },
-        { src: "./docs", dest: "./dist/" },
       ],
     }),
   ],
