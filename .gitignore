@@ -5,8 +5,10 @@ dist
 build
 dist-ssr
 *.local
+.vite
 /coverage
 .pnpm-store
+app.zip
 
 # Sentry Config File
 .env.sentry-build-plugin
