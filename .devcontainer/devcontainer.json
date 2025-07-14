@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts",
-      "pnpm": "latest"
+      "pnpmVersion": "latest"
     }
   },
   "customizations": {
@@ -14,7 +14,7 @@
         "editor.tabSize": 2
       },
       "extensions": [
-        "dbaeumer.vscode-eslint"
+        "denoland.vscode-deno"
       ]
     }
   },
@@ -22,8 +22,5 @@
     "source=${localEnv:HOME}/.gitconfig,target=/home/node/.gitconfig,type=bind,consistency=cached",
     "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached"
   ],
-  "postCreateCommand": "pnpm install",
-  "containerEnv": {
-    "npm_config_store_dir": "/home/node/.local/share/pnpm/store"
-  }
+  "onCreateCommand": "curl -fsSL https://deno.land/x/install/install.sh | sh -s -- --yes && . \"/home/node/.deno/env\""
 }

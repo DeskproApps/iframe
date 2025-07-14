@@ -1,0 +1,25 @@
+{
+  "tasks": {
+    "dev": "deno run -A --node-modules-dir npm:vite",
+    "build": "rm -rf dist/ && deno run -A --node-modules-dir npm:vite build && (cd dist && zip -r -9 ../app.zip ./)",
+    "test": "deno test"
+  },
+  "exclude": [
+    ".vite/",
+    "dist/"
+  ],
+  "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "deno.ns"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  },
+  "imports": {
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
+    "@deskpro/app-sdk-react-test": "jsr:@deskpro/app-sdk-react-test@^0.0.6",
+    "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^4.3.4",
+    "react-dom": "npm:react-dom@^19.1.0",
+    "rollup-plugin-copy": "npm:rollup-plugin-copy@^3.5.0",
+    "vite": "npm:vite@^6.1.1",
+    "react": "npm:react"
+  }
+}

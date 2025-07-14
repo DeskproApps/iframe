@@ -3,7 +3,7 @@
   "tasks": [
     {
       "type": "shell",
-      "command": "pnpm build:package",
+      "command": "deno task build",
       "group": {
         "kind": "build",
         "isDefault": true
@@ -13,7 +13,7 @@
     },
     {
       "type": "shell",
-      "command": "pnpm test",
+      "command": "deno task test",
       "group": {
         "kind": "test",
         "isDefault": true
