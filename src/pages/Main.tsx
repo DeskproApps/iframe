@@ -21,12 +21,11 @@ export default function Main() {
   }, [url]);
 
   if (!url) {
-    return null;
+    return 'Loading';
   }
 
   return (
     <iframe
-      data-testid="iframe"
       src={url}
       allowFullScreen
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

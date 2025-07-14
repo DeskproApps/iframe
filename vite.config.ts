@@ -5,9 +5,14 @@ import copy from "rollup-plugin-copy";
 
 export default defineConfig({
   base: "",
+  server: {
+    allowedHosts: true,
+  },
   plugins: [
     deno(),
-    react(),
+    react({
+
+    }),
     // deno-lint-ignore no-explicit-any
     (copy as any)({
       hook: "writeBundle",
@@ -19,4 +24,7 @@ export default defineConfig({
       ],
     }),
   ],
+  optimizeDeps: {
+    include: ['react/jsx-runtime']
+  }
 });

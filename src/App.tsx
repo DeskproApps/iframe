@@ -4,8 +4,10 @@ import type { Settings } from "./types/deskpro.ts";
 
 export default function App() {
   return (
-    <DeskproProvider<Settings> context={null}>
-      <Main />
-    </DeskproProvider>
+    <>
+      <DeskproProvider<Settings> context={null}>
+        <Main />
+      </DeskproProvider>
+    </>
   );
 }
